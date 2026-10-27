@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: nlp-to-sql
+
+server:
+  port: 8080
+
+llm:
+  provider: ollama   # or "anthropic"
+  anthropic:
+    api-key: ${API_KEY}
+    model: claude-3-5-sonnet-latest
+    base-url: https://api.anthropic.com
+  ollama:
+    model: qwen2.5:3b          # replace with whatever you actually pulled
+    base-url: http://localhost:11434
